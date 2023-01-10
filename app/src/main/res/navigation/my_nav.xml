@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/firstFragment"
@@ -22,5 +22,23 @@
         <action
             android:id="@+id/navigate_to_firstFragment"
             app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="io.tntra.navpoc.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/navigate_to_logout"
+            app:destination="@id/logoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoutFragment"
+        android:name="io.tntra.navpoc.LogoutFragment"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" >
+        <action
+            android:id="@+id/navigate_to_login"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>
